@@ -17,7 +17,7 @@ class CreateDirectorsTable extends Migration
             $table->id();
             $table->timestamps();
             $table->string('first_name');
-            $table->string('first_name');
+            $table->string('last_name');
             $table->dateTime('birth_date');
         });
     }
