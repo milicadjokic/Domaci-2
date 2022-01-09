@@ -9,4 +9,15 @@ class Movie extends Model
 {
     use HasFactory;
     protected $fillable = ['name', 'description', 'duration', 'rate'];
+
+    protected $with = ['director', 'genre'];
+
+    public function director()
+    {
+        return $this->belongsTo(Director::class);
+    }
+    public function genre()
+    {
+        return $this->belongsTo(Genre::class);
+    }
 }
